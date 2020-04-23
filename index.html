@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma</title>
+</head>
+<body>
+    <h1>Suma de dos variables</h1>
+
+    <!--Descripcion del problema-->
+    <p>Programa que recibe dos variables, suma las variables y 
+        muestra el resultado de la suma.
+    </p>
+
+    <!--Analisis basico-->
+    <p>Los datos de entrada seran numeros enteros y dara un resultado
+        con valores enteros.
+    </p>    
+    <p>
+        Se sumaran las variables.
+    </p>
+
+    <!--Input's para recibir las variables-->
+
+    <label for="a">Ingrese el primer numero</label>
+    <input type="number" id="a" name="a">
+    <br>
+    <label for="b">Ingrese el segundo numero</label>
+    <input type="number" id="b" name="b">
+    <br>
+
+    <!--Boton que llamara a la funcion sumar-->
+    <button onclick="sumar()">SUMAR</button><br>
+
+    <!--Campo donde se mostrara el resultados-->
+    <label for="resultado">Resultado de la suma</label>
+    <input type= "number" id="resultado" name="resultado"> 
+
+    <script>
+        function sumar(){
+
+            //Variables que se utilizaran
+            var a;
+            var b;
+            var resultado;
+
+            //Valores del formulario
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var resultado;
+
+            //verificar si las casillas de las variables estan en blanco
+
+            if(a == "" ){
+                a = 0;
+            }else{
+               a = parseInt(a);
+            }
+
+            if(b == "" ){
+                b = 0;
+            }else{
+               b = parseInt(b);
+            }
+
+            //enviamos la suma de los valores
+            resultado = a + b;
+
+            //mostramos resultado
+            document.getElementById("resultado").value = resultado;
+
+        }
+    </script>
+
+
+</body>
+</html>
